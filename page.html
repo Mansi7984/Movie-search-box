@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Details</title>
+ <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="movieDetails" class="details-container"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const movieId = params.get("id");
+
+    fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=fc1fef96`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("movieDetails").innerHTML = `
+         <div class = "movie-poster">
+         <img src = "${(data.Poster != 'N/A') ? data.Poster : 'image_not_found.jpg'}" alt = "movie poster">
+    </div>
+    <div class = "movie-info">
+        <h3 class = "movie-title"><b>🎬</b>${data.Title}</h3>
+        <p class = "plot">${data.Plot}</p>
+        <p class = "genre"><b>Genre:</b> ${data.Genre}</p>
+        <p class = "writer"><b>Writer:</b> ${data.Writer}</p>
+        <p class = "actors"><b>Actors: </b>${data.Actors}</p>
+        <p class = "Director"><b>Director:</b> ${data.Director}</p>
+        <ul class = "movie-misc-info">
+            <li class = "year">Year: ${data.Year}</li>
+            <li class = "rated">⭐Ratings: ${data.Rated}</li>
+            <li class = "released">📅Released: ${data.Released}</li>
+        </ul>
+        <p class = "language"><b>Language:</b> ${data.Language}</p>
+        <p class = "awards"><b>🏆</b> ${data.Awards}</p>
+    </div>
+        `;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+:root{
+  --md-dark-color: #10243b;
+  --dark-color: #021526;
+  --light-dark-color:  #178582;
+  --yellow-color: #f6c188;
+  --input-bg: #0e2a43;
+  --input-border: #ffffff33;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-color);
+}
+
+.header {
+  background-image: url('https://img.freepik.com/free-vector/popcorn-oscar-cinema-icon-movie-element-set_107791-29889.jpg'); /* Optional background */
+  padding: 40px 20px;
+  margin: 10px;
+  border-radius: 50px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  border-bottom: 1px solid var(--light-dark-color);
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.fav {
+  margin-top: 10px;
+  color: #eee;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie-card {
+  width: 200px;
+  margin: 5px;
+  background:var(--light-dark-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  margin: 10px;
+  font-size: 1.1rem;
+}
+
+button{
+   background-color:var(--yellow-color);
+   color: var(--md-dark-color) ;
+   padding: 10px;
+   border-radius: 20px;
+   margin: 10px;
+   font-style: bold;
+}
+
+.details-container {
+  background-color: var(--dark-color);
+  align-items: center;
+  display: flex;
+  width: 75%;
+  justify-items: center;
+  box-shadow: 2px 2px 10px rgba(252, 224, 111, 0.3);
+  margin: 50px 190px;
+  border-radius: 25px;
+}
+
+.details-card {
+  display: flex;
+  max-width: 100px;
+  background-color: var(--dark-color);
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+}
+
+
+
+.movie-poster img{
+  max-width: 300px;
+  margin: 70px ;
+  box-shadow: 2px 2px 10px rgb(68, 68, 68);
+  border-radius: 20px; 
+}
+.movie-info{
+  text-align: left;
+  color: #fff;
+}
+
+.movie-title{
+  font-size: 30px;
+  color: var(--yellow-color);  
+  text-align: left;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  
+}
+.movie-info .plot{
+max-width: 600px;
+padding-bottom: 15px;
+
+}
+.movie-info .genre{
+background-color: var(--light-dark-color);
+display: inline-block;
+padding: 0.5rem;
+border-radius: 3px;
+margin-bottom: 15px;
+}
+.movie-misc-info{
+list-style-type: none;
+display: flex;
+text-align: left;
+
+}
+.movie-info .year{
+  font-weight: 500;
+  padding-top: 10px;
+}
+.movie-info .rated{
+  background-color: var(--light-dark-color);
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.movie-info .released{
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding-top: 10px;
+}
+.movie-info .writer{
+padding-bottom: 15px;
+}
+.movie-info .Director{
+padding-bottom: 15px;
+padding-top: 15px;
+}
+
+.movie-info .language{
+  color: var(--yellow-color);
+  font-style: italic;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.movie-info .awards{
+  font-weight: 300;
+  font-size: 0.9rem;
+  
+}
+.movie-info .awards i{
+  color: var(--yellow-color);
+  margin: 1rem 0.7rem 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background-color: var(--dark-color);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+backdrop-filter: blur(4px);
+}
+
+.login-container {
+width: 350px;
+background-color:var(--dark-color);
+padding: 40px 30px;
+border-radius: 20px;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+text-align: center;
+color: #fff;
+animation: fadeIn 1s ease-in-out;
+}
+
+.login-container h2 {
+margin-bottom: 25px;
+font-size: 1.8rem;
+color: var(--yellow-color);
+text-shadow: 1px 1px 2px black;
+}
+
+.login-container input {
+width: 100%;
+padding: 12px;
+margin: 12px 0;
+border: 1px solid var(--input-border);
+border-radius: 10px;
+background-color: var(--input-bg);
+color: white;
+font-size: 1rem;
+transition: border-color 0.3s ease;
+}
+
+#loginForm{
+margin-right: 18px;
+}
+.login-container input:focus {
+outline: none;
+border-color: var(--yellow-color);
+}
+
+.login-container button {
+width: 100%;
+padding: 12px;
+background-color: var(--yellow-color);
+color: var(--md-dark-color);
+font-weight: bold;
+font-size: 1rem;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+background-color: rgb(244, 181, 87);
+}
+
+#loginMessage {
+margin-top: 15px;
+color: #ff7070;
+font-weight: 500;
+min-height: 24px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+.login-container {
+  width: 90%;
+  padding: 30px 20px;
+}
+
+.login-container h2 {
+  font-size: 1.5rem;
+}
+}
+
+
